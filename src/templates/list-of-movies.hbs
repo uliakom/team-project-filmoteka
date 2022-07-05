@@ -1,0 +1,16 @@
+{{#each this}}
+  <li class='cards-collection-item' data-id={{id}}>
+    <div class='card-poster'>
+      <img
+        src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+        alt='{{title}}'
+        loading='lazy'
+        onerror="this.onerror=null;this.src='https://www.successforumedu.com/uploads/logo/default.png?tr=fo-auto,di-';" />
+      <span class='card-vote-average'>{{vote_average}}</span>
+    </div>
+    <div class='card-info'>
+      <p class='card-title'>{{title}}</p>
+      <p class='card-text'>{{#each genres}}{{name}}{{#unless @last}}, {{/unless}}{{/each}} | {{release_date}}</p>
+    </div>
+  </li>
+{{/each}}

@@ -1,0 +1,127 @@
+.search-filter-form {
+  position: relative;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+
+  margin: 20px;
+  margin-left: 0;
+  padding: 10px 30px;
+
+  color: var(--secondary-bg-color);
+  background-color: inherit;
+  box-shadow: 1px 1px 8px 1px var(--secondary-bg-color);
+  border-radius: 5px;
+
+  transition: box-shadow 250ms linear, color 250ms linear;
+
+  &:hover {
+    color: rgb(246, 181, 61);
+    box-shadow: 1px 1px 8px 3px rgba(243, 205, 135, 0.88);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-droplet {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  fill: currentColor;
+}
+
+.search-form__wrap {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    transform: translateX(120px);
+    padding: 30px 30px;
+    padding-bottom: 0;
+    z-index: 99;
+  }
+
+  @media screen and (min-width: 1024px) {
+    transform: translateX(250px);
+  }
+}
+
+.search-form__wrap.is-open {
+  @media screen and (max-width: 767px) {
+    display: block;
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    background-color: var(--background-body);
+    border-bottom: 3px solid rgba(254, 136, 19, 0.35);
+
+    padding-bottom: 40px;
+    width: 100%;
+    height: fit-content;
+
+    z-index: 99;
+  }
+}
+
+.genre-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 30px 30px;
+  max-width: 250px;
+
+  box-shadow: 1px 1px 12px 3px var(--secondary-bg-color);
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 20px;
+    max-width: 400px;
+
+    transition: box-shadow 250ms linear, transform 250ms linear;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 1px 1px 12px 3px rgba(221, 137, 72, 0.88);
+    }
+  }
+}
+
+.search-form_div-lang {
+  font-weight: 500;
+  margin: 20px 0px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+select {
+  border: 1px solid rgb(207, 167, 94);
+  border-radius: 5px;
+  width: fit-content;
+}
+
+option {
+  padding: 20px;
+  background-color: rgb(246, 242, 238);
+}

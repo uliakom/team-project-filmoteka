@@ -1,0 +1,83 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="logo__list" href="./index.html">
+        <svg class="logo__icon" height="24" width="24">
+          <use href="./images/svg/symbol-defs.svg#icon-icon_film"></use>
+        </svg>
+        <span class="logotext__link">Filmoteka</span>
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <button
+              id="home"
+              class="navigation__button current home__btn"
+              type="button"
+              onclick="window.location.href = './index.html';"
+            >
+              Home
+            </button>
+          </li>
+          <li class="navigation__item">
+            <button id="library" class="navigation__button my-library__btn" type="button">
+              My library
+            </button>
+          </li>
+          <li class="navigation__item">
+            <button
+              id="log-lang"
+              class="navigation__button my-library__btn btn-author-modal-open"
+              type="button"
+            >
+              Log in
+            </button>
+            <button
+              id="log-out"
+              class="navigation__button my-library__btn btn-log-out visually-hidden"
+              type="button"
+            >
+              Log out
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <form class="input__wrapper search-form">
+      <input
+        class="header__input"
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search Movies"
+      />
+      <button class="button__search" type="submit">
+        <svg class="input__icon" width="12" height="12">
+          <use href="./images/svg/symbol-defs.svg#icon-icon_search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <div class="library-btn__list is-hidden-header">
+      <button id="watched-lang" class="library-btn watched-btn active" type="button">
+        Watched
+      </button>
+      <button id="queue-lang" class="library-btn queue-btn" type="button">Queue</button>
+    </div>
+
+    <div class="header-lang__btn">
+      <button class="theme-btn" id="toggle-theme-btn">🌙</button>
+      <button class="translate" id="e-lang-en">EN</button>
+      <span class="translate__span">|</span>
+      <button class="translate" id="e-lang-ua">UA</button>
+      <button
+        onClick="javascript:window.open('https://savelife.in.ua/donate/', '_blank');"
+        id="zsu"
+        class="zsu"
+      >
+        Допомога ЗСУ
+      </button>
+    </div>
+  </div>
+</header>
